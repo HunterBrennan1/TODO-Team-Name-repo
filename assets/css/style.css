@@ -9,10 +9,12 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  /* background-color: #3a5a40; */
 }
 
 h1 {
   font-size: 100px;
   margin: 0px;
   position: relative;
+  text-align: center;
 }

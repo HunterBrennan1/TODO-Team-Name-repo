@@ -58,6 +58,18 @@ h1 {
   color: var(--hue-white);
 }
 
+h2 {
+  text-align: center;
+  color: var(--hue-white);
+  font-size: 35px;
+}
+
+h3 {
+  color: var(--hue-green);
+  font-size: 25px;
+  font-weight: bold;
+}
+
 ul li {
   list-style: none;
   margin-left: 20px;
@@ -70,7 +82,7 @@ ul li {
 ul li a {
   text-decoration: none;
   padding: 6px 15px;
-  color: #fff;
+  color: var(--hue-green);
   border-radius: 20px;
   position: relative;
   top: 30px;
@@ -79,6 +91,46 @@ ul li a {
 
 header ul li a:hover,
 header ul li a.active {
-  background: #fff;
-  color: #212529;
+  background: var(--hue-green);
+  color: var(--hue-white);
+}
+
+.search-box {
+  background-color: var(--hue-gray);
+  display: inline-block;
+  width: 40%;
+  height: 750px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px #000;
+  padding-left: 30px;
+  border-radius: 50px;
+}
+
+.search {
+  height: 80px;
+}
+
+.saved {
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  width: 90%;
+  height: 170px;
+  background-color: var(--hue-green);
+  border-radius: 20px;
+  left: 20px;
+  bottom: 50px;
+}
+
+.wiki-tumblr {
+  background-color: var(--hue-gray);
+  position: absolute;
+  display: inline-block;
+  width: 40%;
+  height: 750px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px #000;
+  padding-left: 30px;
+  border-radius: 50px;
+  left: 1080px;
 }

@@ -13,5 +13,6 @@ header {
 
 h1 {
   font-size: 100px;
-  ;
+  margin: 0px;
+  position: relative;
 }

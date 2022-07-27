@@ -1,18 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+  --hue-darkgreen: #1b4332;
+  --hue-green: #2d6a4f;
+  --hue-lightgreen: #74c69d;
+  --hue-gray: #212529;
+  --hue-white: #fff;
+}
+
 body {
   margin: 0px;
   padding: 0px;
   font-family: 'Poppins', sans-serif;
+  background-image: url(../0_SIQR0gXIKTrqauBN.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  text-transform: uppercase;
+  width: 100%;
+  height: 150px;
+  background-color: var(--hue-gray);
+}
+
+nav {
+  width: 350px;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  top: 7.5px;
+  margin-left: 10px;
+  display: inline-block;
+  height: 135px;
+  width: 135px;
+  border-radius: 75px;
+
 }
 
 h1 {
-  font-size: 100px;
+  display: inline-block;
+  font-size: 80px;
+  width: 800px;
+  height: 150px;
   margin: 0px;
   position: relative;
+  top: 10px;
+  left: 80px;
+  margin: auto;
+  text-align: center;
+  color: var(--hue-white);
+}
+
+h2 {
+  text-align: center;
+  color: var(--hue-white);
+  font-size: 35px;
+}
+
+h3 {
+  color: var(--hue-green);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 30px;
+  display: inline;
+  text-align: center;
+  font-weight: bold;
+}
+
+ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: var(--hue-green);
+  border-radius: 20px;
+  position: relative;
+  top: 30px;
+  right: 10px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: var(--hue-green);
+  color: var(--hue-white);
+}
+
+.search-box {
+  background-color: var(--hue-gray);
+  display: inline-block;
+  width: 40%;
+  height: 750px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px #000;
+  padding-left: 30px;
+  border-radius: 50px;
+}
+
+.search {
+  height: 80px;
+}
+
+.saved {
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  width: 90%;
+  height: 170px;
+  background-color: var(--hue-green);
+  border-radius: 20px;
+  left: 20px;
+  bottom: 50px;
+}
+
+.wiki-tumblr {
+  background-color: var(--hue-gray);
+  position: absolute;
+  display: inline-block;
+  width: 40%;
+  height: 750px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px #000;
+  padding-left: 30px;
+  border-radius: 50px;
+  left: 1080px;
 }

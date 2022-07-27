@@ -10,54 +10,61 @@
   <title>Wiki-Tree</title>
 </head>
 
-<body>
-  <header>
+<body class="m-0 p-0">
+  <header class="is-flex is-justify-content-space-between is-align-items-center is-uppercase my-0 mx-auto ">
     <div>
-      <img class="logo" src="../TODO-Team-Name-repo/assets/logo.jpg">
+      <img class="logo is-relative is-inline-block" src="./assets/logo.jpg">
     </div>
     <div>
-      <h1 class="company-name">Wiki-Trees</h1>
+      <h1 class="company-name is-inline-block m-auto is-relative has-text-centered">Wiki-Tree</h1>
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Search</a></li>
+        <li class="is-inline has-text-centered has-text-weight-bold">
+          <a href="#" class="is-relative">Home</a>
+        </li>
+        <li class="is-inline has-text-centered has-text-weight-bold">
+          <a href="#" class="is-relative">Search</a>
+        </li>
       </ul>
     </nav>
   </header>
-  <section class="search-hero">
-    <section id="search-area" class="search-box">
+  <main class="search-hero columns">
+  <!-- Search inputs go here -->
+    <section id="search-area" class="search-box is-inline-block column is-half">
       <div>
-        <h2>SEARCH FOR TREES</h2>
+        <h2 class="has-text-centered">SEARCH FOR TREES</h2>
       </div>
       <div>
-        <h3>SEARCH 1</h3>
+        <h3 class="has-text-weight-bold">SEARCH 1</h3>
         <form class="search">
           <input type="text">
         </form>
       </div>
       <div>
-        <h3>SEARCH 2</h3>
+        <h3 class="has-text-weight-bold">SEARCH 2</h3>
         <form class="search">
           <input type="text">
         </form>
       </div>
       <div>
-        <h3>SEARCH 3</h3>
+        <h3 class="has-text-weight-bold">SEARCH 3</h3>
         <form class="search">
           <input type="text">
         </form>
       </div>
-      <div class="saved">
-        <h2>SAVED SEARCHES</h2>
+      <div class="saved has-text-centered is-relative m-5">
+        <h2 class="has-text-centered">SAVED SEARCHES</h2>
       </div>
     </section>
-    <section class="wiki-tumblr">
+    </div>
+    <!-- Wikipedia and Tumblr links go here -->
+    <section class="wiki-tumblr is-inline-block column-is-half">
       <div>
-        <h2>WIKI LINKS</h2>
+        <h2 class="has-text-centered">WIKI LINKS</h2>
       </div>
     </section>
-  </section>
+  </main>
 
   <!-- Link to jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

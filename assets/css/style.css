@@ -71,24 +71,24 @@ h3 {
   /* font-weight: bold; */
 }
 
-ul li {
+/* ul li {
   list-style: none;
   margin-left: 20px;
-  font-size: 30px;
+  font-size: 30px; */
   /* display: inline; */
   /* text-align: center; */
   /* font-weight: bold; */
 }
 
-ul li a {
+/* ul li a {
   text-decoration: none;
   padding: 6px 15px;
   color: var(--hue-green);
-  border-radius: 20px;
+  border-radius: 20px; */
   /* position: relative; */
-  top: 30px;
+  /* top: 30px;
   right: 10px;
-}
+} */
 
 header ul li a:hover,
 header ul li a.active {
@@ -116,11 +116,11 @@ header ul li a.active {
   /* position: relative; */
   /* margin: 0px; */
   width: 90%;
-  height: 170px;
+  height: 300px;
   background-color: var(--hue-green);
   border-radius: 20px;
   left: 20px;
-  bottom: 50px;
+  bottom: -40px;
 }
 
 .wiki-tumblr {

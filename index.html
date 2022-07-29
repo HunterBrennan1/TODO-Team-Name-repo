@@ -11,7 +11,7 @@
 </head>
 
 <body class="m-0 p-0">
-  <header class="is-flex is-justify-content-space-between is-uppercase my-0 mx-auto ">
+  <header class="is-flex is-justify-content-space-between is-uppercase my-0 mx-auto">
     <div>
       <img class="logo is-relative is-inline-block" src="./assets/logo.jpg">
     </div>
@@ -19,7 +19,7 @@
       <h1 class="company-name is-inline-block m-auto is-relative has-text-centered">Wiki-Tree</h1>
     </div>
     <nav>
-      <ul>
+      <!-- <ul>
         <li class="is-inline has-text-centered has-text-weight-bold">
           <a href="#" class="is-relative">Home</a>
         </li>
@@ -27,22 +27,22 @@
           <a href="#" class="is-relative">Search</a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
   </header>
   <main class="search-hero columns">
-  <!-- Search inputs go here -->
+  <!-- Search input and search history go here -->
     <section id="search-area" class="search-box is-inline-block column is-half">
       <div>
         <h2 class="has-text-centered">SEARCH FOR TREES</h2>
       </div>
       <div>
-        <h3 class="has-text-weight-bold">SEARCH 1</h3>
-        <form id="search" class="search">
-          <input type="text" id="tree-input">
-          <button class="button is-success">Search</button>
+        <h3 class="has-text-weight-bold m-1">Enter a species of tree in the search field below.</h3>
+        <form id="search" class="search p-1 is-flex is-justify-content-center">
+          <input type="text" class="is-normal is-success" id="tree-input">
+          <button class="button is-success m-2">Search</button>
         </form>
       </div>
-      <div>
+      <!-- <div>
         <h3 class="has-text-weight-bold">SEARCH 2</h3>
         <form id="search" class="search">
           <input type="text" id="tree-input">
@@ -53,8 +53,8 @@
         <form id="search" class="search">
           <input type="text" id="tree-input">
         </form>
-      </div>
-      <div class="saved has-text-centered is-relative m-5">
+      </div> -->
+      <div class="saved has-text-centered is-relative m-0">
         <h2 class="has-text-centered">SAVED SEARCHES</h2>
         <ul id="saved"></ul>
       </div>

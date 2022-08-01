@@ -1,8 +1,8 @@
 // BRANCH 2 TEST
 var formEl = $('#search');
 var treeInputEl = $('#tree-input');
-
 var searchlistDisplay = $('#saved');
+var photoKey = "563492ad6f917000010000015dd2698482af4591a9033ef8047b5bf4"
 
 var printTreeData = function (tree) {
   
@@ -13,7 +13,7 @@ var printTreeData = function (tree) {
 };
 
 var handleFormSubmit = function (event) {
-  event.preventDefault();
+//   event.preventDefault();
 
   var treeInput = treeInputEl.val();
 
@@ -30,7 +30,37 @@ var handleFormSubmit = function (event) {
 
 formEl.on('submit', handleFormSubmit);
   
+// Function to get and display photo
+var getPhoto = () => {
+    let tree = $('#tree-input').val();
+    currentTree = $('#tree-input').val();
+    // Set the queryURL to fetch from API
+    let photoURL = `https://api.pexels.com/v1/search?query=${tree}&per_page=1&page=1`;
+    $.ajax ({
+        method: "GET",
+        headers: {
+            Accept: 'application/json',
+            Authorization: this.photoKey
+        },
+        url: photoURL
+    })
+    .then(function(response) {
+        currentPhoto = response.photos[0].id;
+        console.log(currentPhoto);
+      })
+      .then((response) => {
+            let photo = "https://images.pexels.com/photos/"+ currentPhoto + "/pexels-photo-"+currentPhoto+ ".jpeg?auto=compress&cs=tinysrgb&h=350";
+            $('#display_images').html(`<img src="${photo}">`);
+      })
+}
+
+// search button event listener   
+$('button').on("click", (event) => {
+    event.preventDefault();
+    currentTree = $('#tree-input').val();
+    getPhoto();
+    handleFormSubmit();
+    });
 
 
 
-// grab a reference to the input field and store its value in a variable.

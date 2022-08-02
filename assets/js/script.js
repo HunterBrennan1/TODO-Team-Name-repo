@@ -2,28 +2,21 @@
 var formEl = $('#search');
 var treeInputEl = $('#tree-input');
 var searchlistDisplay = $('#saved');
-var photoKey = "563492ad6f917000010000015dd2698482af4591a9033ef8047b5bf4"
+var photoKey = "563492ad6f917000010000015dd2698482af4591a9033ef8047b5bf4";
 
 var printTreeData = function (tree) {
-  
   // add a class 
   var cardName = $('<li>').addClass('search-list').text(tree);
-
   searchlistDisplay.append(cardName);
 };
 
 var handleFormSubmit = function (event) {
-//   event.preventDefault();
-
   var treeInput = treeInputEl.val();
-
   if (!treeInput) {
     console.log('You need to fill out the form!');
     return;
   }
-
   printTreeData(treeInput);
-
   // reset form
   treeInputEl.val('');
 };
@@ -55,12 +48,17 @@ var getPhoto = () => {
 }
 
 // search button event listener   
-$('button').on("click", (event) => {
+$('#searchBtn').on("click", (event) => {
     event.preventDefault();
     currentTree = $('#tree-input').val();
     getPhoto();
     handleFormSubmit();
     });
 
+// reset search button event listener
+$('#resetBtn').on("click", (event) => {
+    $('#saved').html("");
+    $('#display_images').html("");
+    })
 
 

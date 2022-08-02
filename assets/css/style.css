@@ -24,7 +24,7 @@ body {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #1b4332;
-  background-image: url(../scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg);
+  background-image: url(../images/scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -112,6 +112,22 @@ main {
   border-radius: 1.25rem;
   top: 1.25rem;
   bottom: -2.5rem;
+}
+
+.search-list {
+  color: var(--hue-darkgreen);
+  font-size: 2rem;
+  border-radius: 20px;
+}
+
+.search-list:hover {
+  color: white;
+  background-color: var(--hue-lightgreen);
+}
+
+.search-list:active {
+  color: var(--hue-lightgreen);
+  background-color: white;
 }
 
 .wiki-tumblr {

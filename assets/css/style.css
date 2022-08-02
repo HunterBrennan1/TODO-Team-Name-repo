@@ -20,8 +20,8 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
-body
-{
+
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #1b4332;
   background-image: url(../scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg);
@@ -36,6 +36,7 @@ header {
   width: 100%;
   height: 9.375rem;
   background-color: var(--hue-gray);
+  justify-content: space-between;
 }
 
 nav {
@@ -121,14 +122,24 @@ main {
   box-shadow: 0 0 0.625rem #000;
   padding-left: 1.875rem;
   border-radius: 3.125rem;
-  margin-right: 2rem;
 }
 
 .title-container {
   width: 100px;
 }
 
+#reset-btn {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 1rem;
+  left: 2rem;
+}
 
+.display_images {
+  display: flex;
+  justify-content: center;
+}
 
 @media (max-width:768px) {
   main {
@@ -157,7 +168,17 @@ main {
 
   h1 {
     width: 25rem;
-    font-size: 65px;
+    font-size: 35px;
+    position: relative;
+    top: 2.3rem;
   }
 }
 
+@media (max-width:1150px) {
+  .logo {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 2rem;
+  }
+}

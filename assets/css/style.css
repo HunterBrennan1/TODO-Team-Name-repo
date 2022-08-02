@@ -24,8 +24,6 @@ body {
 }
 
 body {
-  /* margin: 0px; */
-  /* padding: 0px; */
   font-family: 'Poppins', sans-serif;
   background-color: #1b4332;
   background-image: url(../scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg);
@@ -102,7 +100,7 @@ main {
   height: 46.875rem;
   margin: 0.078rem;
   box-shadow: 0 0 0.625rem #000;
-  padding-left: 1.875rem;
+  padding: 2rem;
   border-radius: 3.125rem;
   margin-left: 2rem;
   contain: content;
@@ -175,10 +173,3 @@ main {
     font-size: 65px;
   }
 }
-
-/* @media (max-width:500px) {
-  h1 {
-    position: relative;
-
-  }
-} */

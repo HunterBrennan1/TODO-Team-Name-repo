@@ -1,3 +1,4 @@
+
 // BRANCH 2 TEST
 var formEl = $('#search');
 var treeInputEl = $('#tree-input');
@@ -22,7 +23,7 @@ var handleFormSubmit = function (event) {
 };
 
 formEl.on('submit', handleFormSubmit);
-  
+
 // Function to get and display photo
 var getPhoto = () => {
     let tree = $('#tree-input').val();
@@ -60,5 +61,6 @@ $('#resetBtn').on("click", (event) => {
     $('#saved').html("");
     $('#display_images').html("");
     })
+
 
 

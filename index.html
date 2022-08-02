@@ -12,27 +12,27 @@
 
 <body class="m-0 p-0">
   <header class="is-flex is-justify-content-space-between is-uppercase my-0 mx-auto">
-    <div>
+    <div class="logo-container">
       <img class="logo is-relative is-inline-block" src="./assets/logo.jpg">
     </div>
-    <div>
-      <h1 class="company-name is-inline-block m-auto is-relative has-text-centered">Wiki-Tree</h1>
-    </div>
+    <h1 class="company-name is-inline-block m-auto is-relative has-text-centered">Wiki-Tree</h1>
     <nav>
       <button id="resetBtn" class="button is-success p-5 m-5 is-flex is-align-self-auto">Reset Searches</button>
     </nav>
   </header>
-  <main class="search-hero columns">
-  <!-- Search input and search history go here -->
-    <section id="search-area" class="search-box is-inline-block column is-half">
+  <main class="search-hero columns is-vcentered is-justify-content-space-evenly">
+    <!-- Search input and search history go here -->
+    <section id="search-area" class="search-box column is-one-third">
       <div>
         <h2 class="has-text-centered">SEARCH FOR TREES</h2>
       </div>
       <div>
-        <h3 class="has-text-weight-bold m-1">Enter a species of tree in the search field below.</h3>
-        <form id="search" class="search p-1 is-flex is-justify-content-center">
-          <input type="text" class="is-normal is-success" id="tree-input">
-          <button id="searchBtn" class="button is-success m-2">Search</button>
+        <h3 class="has-text-weight-bold m-1 has-text-centered">Enter a species of tree in the search field below.</h3>
+        <form id="search" class="search p-1 is-flex is-justify-content-center is-align-items-center">
+          <div class="control">
+            <input type="text" class="input is-success" id="tree-input">
+          </div>
+          <button class="button is-success m-2">Search</button>
         </form>
       </div>
       <div class="saved has-text-centered is-relative m-0">
@@ -40,8 +40,9 @@
         <ul id="saved"></ul>
       </div>
     </section>
+
     <!-- Wikipedia and Tumblr links go here -->
-    <section class="wiki-tumblr is-inline-block column-is-half">
+    <section class="wiki-tumblr is-inline-block column is-three-fourths">
       <div>
         <h2 class="has-text-centered">WIKI LINKS</h2>
         <!--Images to be displayed here-->

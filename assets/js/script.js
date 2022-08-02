@@ -1,9 +1,9 @@
-
 // BRANCH 2 TEST
 var formEl = $('#search');
 var treeInputEl = $('#tree-input');
 var searchlistDisplay = $('#saved');
 var photoKey = "563492ad6f917000010000015dd2698482af4591a9033ef8047b5bf4";
+var pageNum = 1;
 
 var printTreeData = function (tree) {
   // add a class 
@@ -29,7 +29,7 @@ var getPhoto = () => {
     let tree = $('#tree-input').val();
     currentTree = $('#tree-input').val();
     // Set the queryURL to fetch from API
-    let photoURL = `https://api.pexels.com/v1/search?query=${tree}&per_page=1&page=1`;
+    let photoURL = `https://api.pexels.com/v1/search?query=${tree}&per_page=1&page=${pageNum}`;
     $.ajax ({
         method: "GET",
         headers: {
@@ -41,7 +41,7 @@ var getPhoto = () => {
     .then(function(response) {
         currentPhoto = response.photos[0].id;
         console.log(currentPhoto);
-      })
+      }) 
       .then((response) => {
             let photo = "https://images.pexels.com/photos/"+ currentPhoto + "/pexels-photo-"+currentPhoto+ ".jpeg?auto=compress&cs=tinysrgb&h=350";
             $('#display_images').html(`<img src="${photo}">`);
@@ -51,7 +51,6 @@ var getPhoto = () => {
 // search button event listener   
 $('#searchBtn').on("click", (event) => {
     event.preventDefault();
-    currentTree = $('#tree-input').val();
     getPhoto();
     handleFormSubmit();
     });
@@ -60,7 +59,17 @@ $('#searchBtn').on("click", (event) => {
 $('#resetBtn').on("click", (event) => {
     $('#saved').html("");
     $('#display_images').html("");
+    if (localStorage.length>0) {
+        localStorage.clear();
+    }    
     })
+
+// Loadmore button event listener 
+$('#loadmore').on("click", () => {
+    pageNum++;
+    getMore();
+})
+
 
 
 

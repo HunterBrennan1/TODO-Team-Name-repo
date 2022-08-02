@@ -1,18 +1,198 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Any CSS rules that can be applied using Bulma are commented out */
+
+
+:root {
+  --hue-darkgreen: #1b4332;
+  --hue-green: #2d6a4f;
+  --hue-lightgreen: #74c69d;
+  --hue-gray: #212529;
+  --hue-white: #fff;
+}
+
+html,
 body {
+
+  width: 100%;
+  height: 100%;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
+}
+body
+{
   font-family: 'Poppins', sans-serif;
+  background-color: #1b4332;
+  background-image: url(../scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  height: 100%;
+
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  height: 9.375rem;
+  background-color: var(--hue-gray);
+}
+
+nav {
+  width: 21.875rem;
+}
+
+.logo {
+  float: left;
+  top: 0.469rem;
+  margin-left: 0.625rem;
+  height: 8.438rem;
+  width: 8.438rem;
+  border-radius: 4.688rem;
+  object-fit: fill;
 }
 
 h1 {
-  font-size: 100px;
-  margin: 0px;
+
+  font-size: 5rem;
+  width: 50rem;
+  height: 9.375rem;
+  display: inline;
+  top: 0.625rem;
+  color: var(--hue-white);
+}
+
+h2 {
+  color: var(--hue-white);
+  font-size: 2.188rem;
+}
+
+h3 {
+  color: var(--hue-green);
+  font-size: 1.563rem;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: var(--hue-green);
+  color: var(--hue-white);
+}
+
+main {
   position: relative;
+  margin: auto;
+  padding: 70px 0;
+
+
+}
+
+.search-box {
+  background-color: var(--hue-gray);
+  width: 40%;
+  height: 46.875rem;
+  margin: 0.078rem;
+  box-shadow: 0 0 0.625rem #000;
+  padding: 2rem;
+  border-radius: 3.125rem;
+  margin-left: 2rem;
+  contain: content;
+}
+
+.search {
+  height: 5rem;
+}
+
+.saved {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  background-color: var(--hue-green);
+  border-radius: 1.25rem;
+  top: 1.25rem;
+  bottom: -2.5rem;
+}
+
+.search-list {
+  color: var(--hue-darkgreen);
+  font-size: 2rem;
+  border-radius: 20px;
+}
+
+.search-list:hover {
+  color: white;
+  background-color: var(--hue-lightgreen);
+}
+
+.search-list:active {
+  color: var(--hue-lightgreen);
+  background-color: white;
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+}
+
+#clear {
+  width: fit-content;
+}
+
+#clear:hover {
+  color: white;
+}
+
+.wiki-tumblr {
+  background-color: var(--hue-gray);
+  position: relative;
+  height: 46.875rem;
+  margin: 1.25rem;
+  box-shadow: 0 0 0.625rem #000;
+  padding-left: 1.875rem;
+  border-radius: 3.125rem;
+  margin-right: 2rem;
+}
+
+#paragraph {
+  color: white;
+  font-size: 1.25rem;
+}
+
+#display_images {
+  display: flex;
+  justify-content: center;
+}
+
+.title-container {
+  width: 100px;
+}
+
+@media (max-width:768px) {
+  main {
+    display: block;
+  }
+
+  .wiki-tumblr {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  .search-box {
+    width: 80%;
+    margin: auto;
+  }
+
+  .logo-container {
+    display: none;
+  }
+
+  .title-container {
+    width: 25rem;
+  }
+
+  h1 {
+    width: 25rem;
+    font-size: 65px;
+  }
 }

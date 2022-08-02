@@ -3,60 +3,53 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../TODO-Team-Name-repo/assets/css/style.css">
+  <!-- Link to Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Link to local css file -->
+  <link rel="stylesheet" href="./assets/css/style.css">
   <title>Wiki-Tree</title>
 </head>
 
-<body>
-  <header>
-    <div>
-      <img class="logo" src="../TODO-Team-Name-repo/assets/logo.jpg">
+<body class="m-0 p-0">
+  <header class="is-flex is-justify-content-space-between is-uppercase my-0 mx-auto">
+    <div class="logo-container">
+      <img class="logo is-relative is-inline-block" src="./assets/logo.jpg">
     </div>
-    <div>
-      <h1 class="company-name">Wiki-Trees</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Search</a></li>
-      </ul>
-    </nav>
+    <h1 class="company-name is-inline-block m-auto is-relative has-text-centered">Wiki-Tree</h1>
+
+
   </header>
-  <section class="search-hero">
-    <section id="search-area" class="search-box">
+  <main class="search-hero columns is-vcentered is-justify-content-space-evenly">
+    <!-- Search input and search history go here -->
+    <section id="search-area" class="search-box column is-one-third">
       <div>
-        <h2>SEARCH FOR TREES</h2>
+        <h2 class="has-text-centered">SEARCH FOR TREES</h2>
       </div>
       <div>
-        <h3>SEARCH 1</h3>
-        <form class="search">
-          <input type="text">
+        <h3 class="has-text-weight-bold m-1 has-text-centered">Enter a species of tree in the search field below.</h3>
+        <form id="search" class="search p-1 is-flex is-justify-content-center">
+          <input type="text" class="is-normal is-success" id="tree-input">
+          <button class="button is-success m-2">Search</button>
         </form>
       </div>
-      <div>
-        <h3>SEARCH 2</h3>
-        <form class="search">
-          <input type="text">
-        </form>
-      </div>
-      <div>
-        <h3>SEARCH 3</h3>
-        <form class="search">
-          <input type="text">
-        </form>
-      </div>
-      <div class="saved">
-        <h2>SAVED SEARCHES</h2>
+
+      <div class="saved has-text-centered is-relative m-0">
+        <h2 class="has-text-centered">SAVED SEARCHES</h2>
+        <ul id="saved"></ul>
       </div>
     </section>
-    <section class="wiki-tumblr">
+    </div>
+    <!-- Wikipedia and Tumblr links go here -->
+    <section class="wiki-tumblr column is-three-fourths">
       <div>
-        <h2>WIKI LINKS</h2>
+        <h2 class="has-text-centered">WIKI LINKS</h2>
       </div>
     </section>
-  </section>
+  </main>
 
-
+  <!-- Link to jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Link to local js file -->
   <script src="./assets/js/script.js"></script>
 </body>
 

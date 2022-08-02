@@ -3,9 +3,6 @@
 /* Any CSS rules that can be applied using Bulma are commented out */
 
 
-
-
-
 :root {
   --hue-darkgreen: #1b4332;
   --hue-green: #2d6a4f;
@@ -16,14 +13,15 @@
 
 html,
 body {
+
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
 }
-
-body {
+body
+{
   font-family: 'Poppins', sans-serif;
   background-color: #1b4332;
   background-image: url(../scenic-mountains-landscape-after-rain-carpathians-ukraine.jpg);
@@ -35,7 +33,6 @@ body {
 }
 
 header {
-
   width: 100%;
   height: 9.375rem;
   background-color: var(--hue-gray);
@@ -62,13 +59,10 @@ h1 {
   height: 9.375rem;
   display: inline;
   top: 0.625rem;
-
-
   color: var(--hue-white);
 }
 
 h2 {
-
   color: var(--hue-white);
   font-size: 2.188rem;
 }
@@ -76,7 +70,6 @@ h2 {
 h3 {
   color: var(--hue-green);
   font-size: 1.563rem;
-
 }
 
 header ul li a:hover,
@@ -95,7 +88,6 @@ main {
 
 .search-box {
   background-color: var(--hue-gray);
-  /* vertical-align: center; */
   width: 40%;
   height: 46.875rem;
   margin: 0.078rem;
@@ -104,9 +96,7 @@ main {
   border-radius: 3.125rem;
   margin-left: 2rem;
   contain: content;
-
 }
-
 
 .search {
   height: 5rem;
@@ -126,15 +116,12 @@ main {
 .wiki-tumblr {
   background-color: var(--hue-gray);
   position: relative;
-  /* display: inline-block; */
-  /* width: 40%; */
   height: 46.875rem;
   margin: 1.25rem;
   box-shadow: 0 0 0.625rem #000;
   padding-left: 1.875rem;
   border-radius: 3.125rem;
   margin-right: 2rem;
-  /* left: 67.5rem; */
 }
 
 .title-container {
@@ -173,3 +160,4 @@ main {
     font-size: 65px;
   }
 }
+

@@ -6,13 +6,13 @@ Wiki-Tree is an application that allows users to search for a specific tree and 
 
  The application is easy to use and mobile friendly with locally saved information stored within the "saved searches" box. Users are able to go back to a previous searched tree with this feature as well as delete previous searches.
 
-================================================================================================================================================
+
 
 # User Story
 
 * As a botanist studying trees I want to find information on specific species of trees so that I can further develop my research on these species of trees.
 
-================================================================================================================================================
+
 
 # Technologies Used
 
@@ -28,15 +28,15 @@ Wiki-Tree is an application that allows users to search for a specific tree and 
 
 * Pexel API [Image-API]
 
-================================================================================================================================================
+
 
 # Screenshots
 
-![Main-Screen](../TODO-Team-Name-repo/assets/images/wiki-tree.JPG)
+![Main-Screen](C:\Users\hunte\Desktop\VsCode\TODO-Team-Name-repo\assets\images\wiki-tree.JPG)
 
 ![Image-after-search]()
 
-================================================================================================================================================
+
 
 # Links
 

@@ -63,8 +63,6 @@ console.log('does');
   printTreeData(treeInput);
 };
 
-formEl.on('submit', handleFormSubmit);
-
 // Function to get and display photo
 var getPhoto = () => {
     console.log($('#tree-input').val());

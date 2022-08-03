@@ -8,6 +8,7 @@ var species = ['oak','spruce','sequoia','pine','elm','maple','birch','sycamore',
 var saveList = $('#saved');
 var clear = $('#clear');
 var wiki = $('#wiki');
+var pageNum=1;
 
 var treesArray = localStorage.getItem('trees');
 console.log(typeof treesArray, treesArray);
@@ -125,6 +126,39 @@ var getInfo = () => {
     })
 }
 
+// get more photos
+var getMore = () => {
+    lastsearch = localStorage.key(0);
+    tree1 = localStorage.getItem(lastsearch);
+    // Set the queryURL to fetch from API
+    let photoURL = `https://api.pexels.com/v1/search?query=${tree1}&per_page=1&page=${pageNum}`;
+    $.ajax ({
+        method: "GET",
+        headers: {
+            Accept: 'application/json',
+            Authorization: this.photoKey
+        },
+        url: photoURL
+    })
+    .then(function(response) {
+        currentPhoto = response.photos[0].id;
+        console.log(currentPhoto);
+      })
+      .then((response) => {
+            let photo = "https://images.pexels.com/photos/"+ currentPhoto + "/pexels-photo-"+ currentPhoto + ".jpeg?auto=compress&cs=tinysrgb&h=350";
+            $('#display_images').html(`<img src="${photo}">`);
+            // $('#wikiTitle').text($('#tree-input').val());
+            treeInputEl.val('');
+      })
+}
+
+//loadmore button
+$('#showmore').on("click", (event) => {
+    event.preventDefault();
+    pageNum++;
+    getMore();
+})
+
 // search button event listener   
 $('button').on("click", (event) => {
     event.preventDefault();
@@ -158,3 +192,4 @@ clear.on('click', function(e) {
   $('li').remove();
   localStorage.clear();
 });
+

@@ -157,7 +157,6 @@ $('#showmore').on("click", (event) => {
     event.preventDefault();
     pageNum++;
     getMore();
-    getInfo();
 })
 
 // search button event listener   

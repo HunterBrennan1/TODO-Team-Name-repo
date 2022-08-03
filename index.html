@@ -10,21 +10,11 @@
   <title>Wiki-Tree</title>
 </head>
 
-<body class="m-0 p-0">
-  <header class="is-flex is-justify-content-space-between is-uppercase my-0 mx-auto">
-    <div class="logo-container">
-      <img class="logo is-relative is-inline-block" src="./assets/images/logo.jpg">
-    </div>
-    <h1 class="company-name is-inline-block m-auto is-relative has-text-centered">Wiki-Tree</h1>
-    <nav>
-      <!-- <button class="button is-success p-5 m-5 is-flex is-align-self-auto">Reset Searches</button> -->
-    </nav>
-  </header>
-  <main class="search-hero columns is-vcentered is-justify-content-space-evenly">
-    <!-- Search input and search history go here -->
-    <section id="search-area" class="search-box column is-one-third">
-      <div>
-        <h2 class="has-text-centered">SEARCH FOR TREES</h2>
+  <body class="m-0 p-0">
+    <header class="is-flex is-justify-content-space-between is-uppercase my-0 mx-auto">
+      <div class="logo-container">
+        <img class="logo is-relative is-inline-block" src="./assets/images/logo.jpg">
+
       </div>
       <div>
         <h3 class="has-text-weight-bold m-1 has-text-centered">Enter a species of tree in the search field below.</h3>
@@ -67,4 +57,27 @@
   <script src="./assets/js/script.js"></script>
 </body>
 
+
+      <!-- Wikipedia and Tumblr links go here -->
+      <section class="wiki-tumblr column is-three-fourths">
+        <div class="wikiUpper">
+          <h2 id="wiki" class="has-text-centered">WIKI</h2>
+          <br>
+          <!--Images to be displayed here-->
+          <div id="display_images" class="display_images"></div>
+        </div>
+        <div class="wikiLower">
+          <hr>
+          <!--Description to be displayed here-->
+          <div id="paragraph"></div>
+          <div id="readmore"></div>
+        </div>
+      </section>
+    </main>
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+    <!-- Link to local js file -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
+

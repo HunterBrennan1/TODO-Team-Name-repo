@@ -1,3 +1,4 @@
+
 // BRANCH 2 TEST
 var formEl = $('#search');
 var treeInputEl = $('#tree-input');
@@ -48,7 +49,6 @@ var printTreeData = function (input) {
 var handleFormSubmit = function (event) {
 
   var treeInput = treeInputEl.val();
-
   if(species.includes(treeInput) == false){
     $('#paragraph').text('Never heard of it!');
     treeInputEl.val('');
@@ -61,7 +61,6 @@ var handleFormSubmit = function (event) {
   }
 
 console.log('does');
-
   if (!treeInput) {
     console.log('You need to fill out the form!');
     return;
@@ -158,4 +157,4 @@ clear.on('click', function(e) {
   $('#readmore').text('');
   $('li').remove();
   localStorage.clear();
-})
+});

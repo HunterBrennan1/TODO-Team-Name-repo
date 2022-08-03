@@ -36,6 +36,20 @@ header {
   width: 100%;
   height: 9.375rem;
   background-color: var(--hue-gray);
+}
+
+nav {
+  width: 21.875rem;
+}
+
+.logo {
+  float: left;
+  top: 0.469rem;
+  margin-left: 0.625rem;
+  height: 8.438rem;
+  width: 8.438rem;
+  border-radius: 4.688rem;
+  object-fit: fill;
   justify-content: space-between;
 }
 
@@ -54,7 +68,6 @@ nav {
 }
 
 h1 {
-
   font-size: 5rem;
   width: 50rem;
   height: 9.375rem;
@@ -83,14 +96,12 @@ main {
   position: relative;
   margin: auto;
   padding: 70px 0;
-
-
 }
 
 .search-box {
   background-color: var(--hue-gray);
   width: 40%;
-  height: 46.875rem;
+  height: fit-content;
   margin: 0.078rem;
   box-shadow: 0 0 0.625rem #000;
   padding: 2rem;
@@ -107,7 +118,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 18.75rem;
+  height: fit-content;
   background-color: var(--hue-green);
   border-radius: 1.25rem;
   top: 1.25rem;
@@ -130,6 +141,19 @@ main {
   background-color: white;
 }
 
+.clear {
+  display: flex;
+  justify-content: center;
+}
+
+#clear {
+  width: fit-content;
+}
+
+#clear:hover {
+  color: white;
+}
+
 .wiki-tumblr {
   background-color: var(--hue-gray);
   position: relative;
@@ -138,6 +162,18 @@ main {
   box-shadow: 0 0 0.625rem #000;
   padding-left: 1.875rem;
   border-radius: 3.125rem;
+  margin-right: 2rem;
+}
+
+#paragraph {
+  color: white;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+#display_images {
+  display: flex;
+  justify-content: center;
 }
 
 .title-container {
@@ -161,7 +197,6 @@ main {
   main {
     display: block;
   }
-
 
   .wiki-tumblr {
     width: 80%;

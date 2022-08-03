@@ -3,13 +3,11 @@ var formEl = $('#search');
 var treeInputEl = $('#tree-input');
 var searchlistDisplay = $('#saved');
 var photoKey = "563492ad6f917000010000015dd2698482af4591a9033ef8047b5bf4"
-var species = ['oak','spruce','sequoia','pine'];
+var species = ['oak','spruce','sequoia','pine','elm','maple','birch','sycamore','larch','magnolia','cypress','poplar','chestnut','cedar','basswood','fir','hemlock'];
 var saveList = $('#saved');
 var clear = $('#clear');
 var wiki = $('#wiki');
 
-// var treesArray = []
-// treesArray = JSON.parse(localStorage.getItem('trees'));
 var treesArray = localStorage.getItem('trees');
 console.log(typeof treesArray, treesArray);
 if(treesArray !== null) {
@@ -29,7 +27,13 @@ var printTreeData = function (input) {
   if(trees2 == null){
     trees2 = [];
   }
-  if(trees2.includes(input) == false) {
+  if(trees2.includes(input) == false && trees2.length < 9) {
+    console.log(trees2);
+    trees2.unshift(input);
+    console.log(trees2);
+  } else if (trees2.length = 9) {
+    console.log(trees2);
+    trees.pop();
     console.log(trees2);
     trees2.unshift(input);
     console.log(trees2);
@@ -46,8 +50,12 @@ var handleFormSubmit = function (event) {
   var treeInput = treeInputEl.val();
 
   if(species.includes(treeInput) == false){
+    $('#paragraph').text('Never heard of it!');
     treeInputEl.val('');
-    $('#display_images').html(`<img src="https://i.imgur.com/qFmcbT0.jpg">`);
+    wiki.text('WIKI');
+    $('#display_images').html(`<img src="https://i.imgur.com/qFmcbT0.jpg" width="50%" height="50%">`);
+    $('#paragraph').text('');
+    $('#readmore').text('');
     console.log('does not');
     return 1;
   }
@@ -60,8 +68,6 @@ console.log('does');
   }
 
   printTreeData(treeInput);
-
-  // reset form
 };
 
 formEl.on('submit', handleFormSubmit);
@@ -69,7 +75,8 @@ formEl.on('submit', handleFormSubmit);
 // Function to get and display photo
 var getPhoto = () => {
     console.log($('#tree-input').val());
-    let tree = $('#tree-input').val();
+    var tree = $('#tree-input').val();
+    // tree = tree.replace(/\s/g, '_');
     currentTree = $('#tree-input').val();
     // Set the queryURL to fetch from API
     let photoURL = `https://api.pexels.com/v1/search?query=${tree}&per_page=1&page=1`;
@@ -108,7 +115,7 @@ var getInfo = () => {
         key = key.substring(4, key.length - 4);
         console.log(typeof key, key);
         var infoLong = data.query.pages[key].extract;
-        var info = infoLong.substring(0, 500);
+        var info = infoLong.substring(0, 400);
         console.log(info);
         console.log(data);
         wiki.text(() => {

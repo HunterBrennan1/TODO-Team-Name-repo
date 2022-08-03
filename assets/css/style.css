@@ -89,7 +89,7 @@ main {
 .search-box {
   background-color: var(--hue-gray);
   width: 40%;
-  height: 46.875rem;
+  height: fit-content;
   margin: 0.078rem;
   box-shadow: 0 0 0.625rem #000;
   padding: 2rem;
@@ -155,7 +155,8 @@ main {
 
 #paragraph {
   color: white;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  word-wrap: break-word;
 }
 
 #display_images {

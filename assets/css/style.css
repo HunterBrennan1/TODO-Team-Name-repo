@@ -165,6 +165,10 @@ main {
   margin-right: 2rem;
 }
 
+.hide {
+  display: none;
+}
+
 #paragraph {
   color: white;
   font-size: 1rem;

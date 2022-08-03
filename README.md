@@ -32,9 +32,9 @@ Wiki-Tree is an application that allows users to search for a specific tree and 
 
 # Screenshots
 
-![Main-Screen](C:\Users\hunte\Desktop\VsCode\TODO-Team-Name-repo\assets\images\wiki-tree.JPG)
+![Main-Screen](../TODO-Team-Name-repo/assets/images/wikitree1.JPG)
 
-![Image-after-search]()
+![Image-after-search](../TODO-Team-Name-repo/assets/images/wiki-tree2.JPG)
 
 
 
